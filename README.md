@@ -1,14 +1,17 @@
 # chess
 Predict best moves for chess.com 
 
-# Setup
+# Run on host
+[Install poetry](https://python-poetry.org/docs/#installation)
 ```
-apt-get install stockfish
-apt-get install python3-pip
-pip3 install stockfish
+apt install stockfish
+
+poetry run python -m chess_cheater.cli <cheater name>
 ```
 
-# Usage
+# Run in docker
 ```
-:<chess_dir>$ python3 main.py <username>
+docker build -f Dockerfile -t cc .
+docker run --rm cc
 ```
+[Happy cheating](http://127.0.0.1/docs)
