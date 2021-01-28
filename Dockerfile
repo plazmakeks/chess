@@ -11,7 +11,7 @@ COPY chess_cheater /app/chess-cheater/chess_cheater
 
 RUN cd /app/chess-cheater && poetry install -n
 
-EXPOSE 8000
+EXPOSE 8080
 
 WORKDIR /app/chess-cheater
-CMD poetry run uvicorn chess_cheater.rest:app
+CMD ["poetry", "run", "uvicorn", "--host", "0.0.0.0", "--port", "8080", "chess_cheater.rest:app"]

@@ -9,7 +9,7 @@ from chess_cheater.prediction import Prediction
 
 class Predictor:
     def __init__(self):
-        self.stockfish = Stockfish()
+        self.stockfish = Stockfish("/usr/games/stockfish")
 
     def get_games(self, player: str) -> List[Game]:
         url = f"https://api.chess.com/pub/player/{player}/games"
